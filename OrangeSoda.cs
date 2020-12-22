@@ -11,6 +11,11 @@ namespace Soda_Machine
         // member variables
 
         // constructor
+        public OrangeSoda()
+        {
+            name = "Orange Soda";
+            cost = 0.60; 
+        }
 
         // member methods
     }

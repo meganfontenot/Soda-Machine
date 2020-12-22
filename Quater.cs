@@ -11,7 +11,11 @@ namespace Soda_Machine
         // member variables
 
         // constructor
-
+        public Quater ()
+        {
+            name = "Quater";
+            value = 0.25;
+        }
         // member methods
     }
 }

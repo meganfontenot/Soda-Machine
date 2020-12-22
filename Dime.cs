@@ -11,6 +11,11 @@ namespace Soda_Machine
         // member variables
 
         // constructor
+        public Dime ()
+        {
+            name = "Dime";
+            value = 0.10;
+        }
 
         // member methods
     }

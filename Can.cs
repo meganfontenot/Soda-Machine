@@ -9,6 +9,15 @@ namespace Soda_Machine
     class Can
     {
         // member variables
+        public string name;
+        protected double cost;
+        public double Cost
+        {
+            get
+            {
+                return cost;
+            }
+        }
 
         // constructor
 

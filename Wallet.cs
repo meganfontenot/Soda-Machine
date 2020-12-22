@@ -9,6 +9,8 @@ namespace Soda_Machine
     class Wallet
     {
         // member variables
+        public List<Coin> coins;
+        public Card card;
 
         // constructor
 

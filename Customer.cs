@@ -9,6 +9,8 @@ namespace Soda_Machine
     class Customer
     {
         // member variables
+        public Wallet wallet;
+        public Backpack backpack;
 
         // constructor
 

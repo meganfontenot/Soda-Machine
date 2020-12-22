@@ -9,6 +9,8 @@ namespace Soda_Machine
     class Simulation
     {
         // member variables
+        public TheSodaMachine theSoadMachine;
+        public Customer customer;
 
         // constructor
 

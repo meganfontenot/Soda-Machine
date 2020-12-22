@@ -9,6 +9,14 @@ namespace Soda_Machine
     class Card
     {
         // member variables
+        private double spendableFunds;
+        private double SpendableFunds
+        {
+            get
+            {
+                return SpendableFunds;
+            }
+        }
 
         // constructor
 

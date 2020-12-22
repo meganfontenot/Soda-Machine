@@ -11,6 +11,11 @@ namespace Soda_Machine
         // member variables
 
         // constructor
+        public Nickel ()
+        {
+            name = "Nickel";
+            value = 0.05;
+        }
 
         // member methods
     }

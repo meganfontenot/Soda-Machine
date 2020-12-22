@@ -11,7 +11,11 @@ namespace Soda_Machine
         // member variables
 
         // constructor
-
+        public Penny ()
+        {
+            name = "Penny";
+            value = 0.01;
+        }
         // member methods
     }
 }
