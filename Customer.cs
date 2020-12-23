@@ -20,6 +20,7 @@ namespace Soda_Machine
         }
 
         // member methods
+        //Count money
         private void CountFunds()
         {
             double totalFunds = 0;
@@ -31,6 +32,7 @@ namespace Soda_Machine
             Console.WriteLine($"You have {totalFundsFormatted} in your wallet.");
         }
 
+        //Need to display what is in the wallet (number of each type of coin)
         public void DisplayContents(Wallet wallet)
         {
             CountFunds();
@@ -66,6 +68,7 @@ namespace Soda_Machine
             }
         }
 
+        //Need to Display what is in the back pack
         public void DisplayContents(Backpack backpack)
         {
             if (backpack.cans.Count == 0)
@@ -91,7 +94,7 @@ namespace Soda_Machine
                             cansOfRootBeer++;
                             break;
                     }
-                    Console.WriteLine($"Your wallet contains {cansOfCola} cans of Cola, {cansOfOrangeSoda} cans of Orange Soda, and {cansOfRootBeer} cans of Root Beer.");
+                    Console.WriteLine($"Your backpack contains {cansOfCola} cans of Cola, {cansOfOrangeSoda} cans of OrangeSoda, and {cansOfRootBeer} cans of RootBeer.");
                 }
             }
         }

@@ -6,12 +6,7 @@ using System.Threading.Tasks;
 
 namespace Soda_Machine
 {
-     static class UserInterface
+    static class Verification
     {
-        // member variables
-
-        // constructor
-
-        // member methods
     }
 }
