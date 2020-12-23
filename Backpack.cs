@@ -12,6 +12,10 @@ namespace Soda_Machine
         public List<Can> cans;
 
         // constructor
+        public Backpack ()
+        {
+            cans = new List<Can>();
+        }
 
         // member methods
     }
