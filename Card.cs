@@ -8,7 +8,7 @@ namespace Soda_Machine
 {
     class Card
     {
-        // member variables (HAS A)
+        // member variables
         private double availableFunds;
         public double AvailableFunds
         {
@@ -22,12 +22,10 @@ namespace Soda_Machine
             }
         }
 
-        // constructor (SPAWN)
+        // constructor
         public Card()
         {
             availableFunds = 5.00;
         }
-
-        // member methods (CAN DO)
     }
 }

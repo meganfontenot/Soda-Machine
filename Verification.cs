@@ -9,6 +9,7 @@ namespace Soda_Machine
 {
     static class Verification
     {
+        //Make sure user puts in correct responses when prompted
         public static string VerifyUserInput(string userInput, int start, int end)
         {
             string verifiedUserInput = "";
@@ -24,6 +25,7 @@ namespace Soda_Machine
             return verifiedUserInput;
         }
 
+        //Need to make sure coin is in register
         public static bool CheckIfObjectExists(List<Coin> register, string coinName)
         {
             bool coinExists = false;
@@ -38,6 +40,7 @@ namespace Soda_Machine
             return coinExists;
         }
 
+        //Need to make sure soda is in inventory 
         public static bool CheckIfObjectExists(List<Can> inventory, string sodaName)
         {
             bool canExists = false;
@@ -51,6 +54,7 @@ namespace Soda_Machine
             }
             return canExists;
         }
+        //Count money
         public static double CountMoney(List<Coin> repository)
         {
             double totalMoney = 0;

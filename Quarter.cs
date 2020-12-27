@@ -6,9 +6,8 @@ using System.Threading.Tasks;
 
 namespace Soda_Machine
 {
-    class Quarter : Coin // (IS A)
+    class Quarter : Coin 
     {
-        // member variables (HAS A)
 
         // constructor (SPAWN)
         public Quarter()
@@ -17,6 +16,5 @@ namespace Soda_Machine
             value = 0.25;
         }
 
-        // member methods (CAN DO)
     }
 }

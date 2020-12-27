@@ -6,9 +6,8 @@ using System.Threading.Tasks;
 
 namespace Soda_Machine
 {
-    class Nickel : Coin // (IS A)
+    class Nickel : Coin 
     {
-        // member variables (HAS A)
 
         // constructor (SPAWN)
         public Nickel()
@@ -17,6 +16,5 @@ namespace Soda_Machine
             value = 0.05;
         }
 
-        // member methods (CAN DO)
     }
 }

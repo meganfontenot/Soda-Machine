@@ -8,15 +8,12 @@ namespace Soda_Machine
 {
     class Cola : Can // (IS A)
     {
-        // member variables (HAS A)
 
-        // constructor (SPAWN)
+        // constructor
         public Cola()
         {
             name = "Cola";
             cost = 0.35;
         }
-
-        // member methods (CAN DO)
     }
 }

@@ -8,12 +8,12 @@ namespace Soda_Machine
 {
     class Simulation
     {
-        // member variables (HAS A)
+        // member variables
 
         public SodaMachine sodaMachine;
         public Customer customer;
 
-        // constructor (SPAWN)
+        // constructor
 
         public Simulation()
         {
@@ -21,21 +21,24 @@ namespace Soda_Machine
             customer = new Customer();
         }
 
-        // member methods (CAN DO)
+        // member methods
 
         public void RunSimulation()
         {
-            string paymentMethod = UserInterface.ChoosePaymentMethod(); // Choose card or coin payment
+            // Choose card or coin
+            string paymentMethod = UserInterface.ChoosePaymentMethod(); 
             string userSelection = "0";
-            if (paymentMethod == "1") // Card payment
+            if (paymentMethod == "1") 
             {
                 Console.Clear();
-                customer.InsertPayment(customer.wallet.card); // Display available funds
-                userSelection = UserInterface.MakeSelection(sodaMachine, paymentMethod); // Choose soda
-                bool canCompleteTransaction = sodaMachine.ProcessTransaction(userSelection, customer); // Verify adequate funds are available
-                if (canCompleteTransaction) // If funds available
+                //display available funds
+                customer.InsertPayment(customer.wallet.card);
+                //pick soda
+                userSelection = UserInterface.MakeSelection(sodaMachine, paymentMethod);
+                //check  funds are available
+                bool canCompleteTransaction = sodaMachine.ProcessTransaction(userSelection, customer); 
+                if (canCompleteTransaction) 
                 {
-                    // Clean this up - redundant call of GetSodaCost()
                     double sodaCost = Math.Round(SodaMachine.GetSodaCost(userSelection), 2);
                     sodaMachine.CompleteTransaction(customer, sodaCost, userSelection);
                 }
@@ -46,15 +49,18 @@ namespace Soda_Machine
             }
             else
             {
-                while (userSelection == "0") // User opts to enter more money
+                //User can enter more money
+                while (userSelection == "0")
                 {
-                    customer.InsertPayment(sodaMachine); // Insert coin into machine, stored in hopperIn
-                    double moneyInHopper = Math.Round(Verification.CountMoney(sodaMachine.hopperIn), 2); // Calculate money currently in hopper
+                    //Insert coin into hopper
+                    customer.InsertPayment(sodaMachine); 
+                    double moneyInHopper = Math.Round(Verification.CountMoney(sodaMachine.hopperIn), 2); // Count money in hopper
                     Console.Clear();
                     Console.WriteLine($"Money inserted: {moneyInHopper:C2}\n"); // Display money in hopper
-                    userSelection = UserInterface.MakeSelection(sodaMachine, paymentMethod); // Choose soda or enter more money
+                    //Choose soda OR enter more money
+                    userSelection = UserInterface.MakeSelection(sodaMachine, paymentMethod); 
                 } // Break once user chooses soda
-                bool canCompleteTransaction = sodaMachine.ProcessTransaction(userSelection); // Calculate money inserted v cost of soda
+                bool canCompleteTransaction = sodaMachine.ProcessTransaction(userSelection); 
                 if (canCompleteTransaction) // If adequate amount of money passed in
                 {
                     sodaMachine.CompleteTransaction(customer, userSelection);
@@ -67,7 +73,8 @@ namespace Soda_Machine
 
         }
 
-        public void DisplayAllStats() // Display current state of simulation - see how objects have changed hands throughout transaction
+        //Display "state" of simulation. (how objects change throughout transaction process
+        public void DisplayAllStats() 
         {
             Console.WriteLine("\nPress enter to display all current simulation statistics: ");
             Console.ReadLine();
@@ -82,6 +89,8 @@ namespace Soda_Machine
             customer.DisplayContents(customer.backpack);
         }
 
+        //Give option to purchase again
+        //run simulation again
         public bool RunSimulationAgain()
         {
             bool runAgain;

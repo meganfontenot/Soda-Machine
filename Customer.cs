@@ -8,30 +8,30 @@ namespace Soda_Machine
 {
     class Customer
     {
-        // member variables (HAS A)
+        // member variables
         public Wallet wallet;
         public Backpack backpack;
 
-        // constructor (SPAWN)
+        // constructor
         public Customer()
         {
             wallet = new Wallet();
             backpack = new Backpack();
         }
 
-        // member methods (CAN DO)
-
+        // member methods
+        //Need to display customer contents (wallet)
         public void DisplayContents(Wallet wallet)
         {
             double amountInWallet = Math.Round(Verification.CountMoney(wallet.coins), 2);
-            Console.WriteLine($"You currently have {amountInWallet:C2} in coins in your wallet.");
+            Console.WriteLine($"You have {amountInWallet:C2} in coins in your wallet.");
             int numberOfQuarters = 0;
             int numberOfDimes = 0;
             int numberOfNickels = 0;
             int numberOfPennies = 0;
             if (wallet.coins.Count == 0)
             {
-                Console.WriteLine("You currently have no coins in your wallet.");
+                Console.WriteLine("You have no coins in your wallet.");
             }
             else
             {
@@ -57,16 +57,18 @@ namespace Soda_Machine
             }
         }
 
+        //Need to display cutomer contents (card)
         public void DisplayContents(Card card)
         {
             Console.WriteLine($"Your card has a balance of: {card.AvailableFunds:C2}\n");
         }
 
+        //Need to display contents in customer backpack
         public void DisplayContents(Backpack backpack)
         {
             if (backpack.cans.Count == 0)
             {
-                Console.WriteLine("You currently have nothing in your backpack.");
+                Console.WriteLine("You currently don't have anything in your backpack.");
             }
             else
             {
@@ -92,11 +94,16 @@ namespace Soda_Machine
             }
         }
 
+        // PAYMENT //
+        
+        
+        //Pay with card
         public void InsertPayment(Card card)
         {
             DisplayContents(card);
         }
 
+        //Insert user payment
         public void InsertPayment(SodaMachine sodaMachine)
         {
             DisplayContents(wallet);

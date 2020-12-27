@@ -8,19 +8,18 @@ namespace Soda_Machine
 {
      static class UserInterface
     {
-        // member variables
-
-        // constructor
 
         // member methods
-        public static void DisplayWelcome() // Generic display before customer begins transaction
+        //prompt customers to begin transaction 
+        public static void DisplayWelcome() 
         {
             Console.WriteLine("Press enter to enter payment and make a selection.");
             Console.ReadLine();
             Console.Clear();
         }
 
-        public static string ChoosePaymentMethod() // Choose card or coin payment
+        //Card or Coin
+        public static string ChoosePaymentMethod() 
         {
             Console.WriteLine("Enter 1 to pay with card, Enter 2 to pay with coins: ");
             string userInput = Console.ReadLine();
@@ -28,7 +27,8 @@ namespace Soda_Machine
             return verifiedUserInput;
         }
 
-        public static string MakeSelection(SodaMachine sodaMachine, string paymentMethod) // Customer chooses soda
+        //Customer chooses a soda
+        public static string MakeSelection(SodaMachine sodaMachine, string paymentMethod) 
         {
             Console.WriteLine("Please make a selection: \n");
             sodaMachine.DisplayCurrentInventory();
@@ -45,12 +45,11 @@ namespace Soda_Machine
                 Console.Write("\nSelect a soda, or enter 0 to insert more coins: ");
                 userInput = Console.ReadLine();
                 verifiedUserInput = Verification.VerifyUserInput(userInput, 0, 3); // Allow customer to choose to input more coins
-                if (verifiedUserInput == "0") // Return to interface to enter more coins
+                if (verifiedUserInput == "0") // Return to prompt interface to enter more coins
                 {
                     return verifiedUserInput;
                 }
             }
-            // Move this to Verification?
             bool canExists = false;
             while (!canExists)
             {
@@ -66,7 +65,7 @@ namespace Soda_Machine
                         canExists = Verification.CheckIfObjectExists(sodaMachine.inventory, "Root Beer");
                         break;
                 }
-                if (!canExists) // Prompt to make another choice if soda is sold out
+                if (!canExists) // Prompt to make another choice if soda their is sold out
                 {
                     Console.WriteLine("This soda is sold out. Please make another selection.");
                     userInput = Console.ReadLine();

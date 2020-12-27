@@ -8,7 +8,6 @@ namespace Soda_Machine
 {
     class RootBeer : Can
     {
-        // member variables
 
         // constructor
         public RootBeer ()
@@ -16,7 +15,5 @@ namespace Soda_Machine
             name = "Root Beer";
             cost = 0.60;
         }
-
-        // member methods
     }
 }

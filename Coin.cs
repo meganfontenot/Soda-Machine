@@ -18,9 +18,5 @@ namespace Soda_Machine
                 return value;
             }
         }
-
-        // constructor (SPAWN)
-
-        // member methods (CAN DO)
     }
 }

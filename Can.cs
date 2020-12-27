@@ -8,7 +8,7 @@ namespace Soda_Machine
 {
     abstract class Can
     {
-        // member variables (HAS A)
+        // member variables 
         public string name;
         protected double cost;
         public double Cost
@@ -18,9 +18,5 @@ namespace Soda_Machine
                 return cost;
             }
         }
-
-        // constructor (SPAWN)
-
-        // member methods (CAN DO)
     }
 }
