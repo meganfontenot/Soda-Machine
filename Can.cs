@@ -6,9 +6,9 @@ using System.Threading.Tasks;
 
 namespace Soda_Machine
 {
-    class Can
+    abstract class Can
     {
-        // member variables
+        // member variables (HAS A)
         public string name;
         protected double cost;
         public double Cost
@@ -19,8 +19,8 @@ namespace Soda_Machine
             }
         }
 
-        // constructor
+        // constructor (SPAWN)
 
-        // member methods
+        // member methods (CAN DO)
     }
 }

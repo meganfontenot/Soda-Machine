@@ -8,15 +8,15 @@ namespace Soda_Machine
 {
     class Backpack
     {
-        // member variables
+        // member variables (HAS A)
         public List<Can> cans;
 
-        // constructor
-        public Backpack ()
+        // constructor (SPAWN)
+        public Backpack()
         {
             cans = new List<Can>();
         }
 
-        // member methods
+        // member methods (CAN DO)
     }
 }

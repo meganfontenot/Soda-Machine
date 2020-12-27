@@ -1,5 +1,4 @@
-﻿using MySodaMachine;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -11,10 +10,17 @@ namespace Soda_Machine
     {
         static void Main(string[] args)
         {
-            SodaMachine sodaMachine = new SodaMachine();
-            Customer customer = new Customer();
-            customer.DisplayContents(customer.wallet);
-            customer.DisplayContents(customer.backpack);
+            Simulation simulation = new Simulation();
+            UserInterface.DisplayWelcome();
+            bool runAgain;
+            do
+            {
+                Console.Clear();
+                simulation.RunSimulation();
+                simulation.DisplayAllStats();
+                runAgain = simulation.RunSimulationAgain();
+            }
+            while (runAgain);
         }
     }
 }

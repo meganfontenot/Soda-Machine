@@ -8,18 +8,26 @@ namespace Soda_Machine
 {
     class Card
     {
-        // member variables
-        private double spendableFunds;
-        private double SpendableFunds
+        // member variables (HAS A)
+        private double availableFunds;
+        public double AvailableFunds
         {
             get
             {
-                return SpendableFunds;
+                return availableFunds;
+            }
+            set
+            {
+                availableFunds = value;
             }
         }
 
-        // constructor
+        // constructor (SPAWN)
+        public Card()
+        {
+            availableFunds = 5.00;
+        }
 
-        // member methods
+        // member methods (CAN DO)
     }
 }

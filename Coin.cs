@@ -8,7 +8,7 @@ namespace Soda_Machine
 {
     abstract class Coin
     {
-        // member variables
+        // member variables (HAS A)
         public string name;
         protected double value;
         public double Value
@@ -18,8 +18,9 @@ namespace Soda_Machine
                 return value;
             }
         }
-        // constructor
 
-        // member methods
+        // constructor (SPAWN)
+
+        // member methods (CAN DO)
     }
 }

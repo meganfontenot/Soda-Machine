@@ -6,17 +6,17 @@ using System.Threading.Tasks;
 
 namespace Soda_Machine
 {
-    class OrangeSoda : Can
+    class OrangeSoda : Can // (IS A)
     {
-        // member variables
+        // member variables (HAS A)
 
-        // constructor
+        // constructor (SPAWN)
         public OrangeSoda()
         {
             name = "Orange Soda";
-            cost = 0.06; 
+            cost = 0.06;
         }
 
-        // member methods
+        // member methods (CAN DO)
     }
 }
